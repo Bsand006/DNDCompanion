@@ -9,18 +9,21 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- * JavaFX App
+/*
+ * D&D Companion character creator app developed using Javafx library
+ * @author Brian Sand
  */
+
 public class App extends Application {
+	Stage primaryStage;
 
 	@Override
 	public void start(Stage primaryStage) {
-		
+
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
-		
+
 		try {
 			VBox root = FXMLLoader.load(getClass().getResource("menu.fxml"));
 			Scene scene = new Scene(root, width, height);
@@ -30,6 +33,10 @@ public class App extends Application {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Stage getStage() {
+		return primaryStage;
 	}
 
 	public static void main(String[] args) {

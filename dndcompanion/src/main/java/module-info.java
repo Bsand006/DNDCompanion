@@ -1,5 +1,8 @@
 module dndcompanion {
+	
 	exports dndcompanion.dndcompanion;
+	exports dndcompanion.compendium;
+	exports dndcompanion.compendium.spells;
 
 	requires javafx.base;
 	requires javafx.controls;
