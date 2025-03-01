@@ -37,6 +37,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <VBox alignment="CENTER" prefHeight="427.0" prefWidth="640.0" spacing="20.0" style="-fx-background-color: #666475;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndcompanion.dndcompanion.MenuController">
   <children>
       <Label text="D&amp;D Companion" textFill="#1e0000" />
@@ -50,7 +51,8 @@
       <Button fx:id="open" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="46.0" prefWidth="126.0" text="Open Sheet">
          <font>
             <Font size="18.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button fx:id="comp" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="41.0" prefWidth="129.0" text="Compendium">
          <font>
             <Font size="16.0" />

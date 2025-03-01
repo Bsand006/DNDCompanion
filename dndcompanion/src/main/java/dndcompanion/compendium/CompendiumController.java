@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 
 public class CompendiumController {
 	Scene currentScene;
-	
+
 	Classes classes;
 	Spells spells;
 	Feats feats;
@@ -24,12 +24,11 @@ public class CompendiumController {
 	@FXML
 	public Button feat;
 
-	@FXML 
+	@FXML
 	public Button equip;
-	
+
 	@FXML
 	public Button back;
-	
 
 	@FXML
 	public void onButtonClicked(ActionEvent e) {
@@ -45,9 +44,9 @@ public class CompendiumController {
 		} else if (e.getSource().equals(feat)) {
 
 		} else if (e.getSource().equals(equip)) {
-			
+
 		} else {
-			
+
 		}
 	}
 

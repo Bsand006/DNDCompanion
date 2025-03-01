@@ -37,6 +37,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <VBox alignment="CENTER" prefHeight="400.0" prefWidth="640.0" spacing="10.0" style="-fx-background-color: #666475;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndcompanion.compendium.CompendiumController">
    <children>
       <Label prefHeight="26.0" prefWidth="121.0" text="Compendium">
