@@ -36,7 +36,7 @@ public class App extends Application {
 		try {
 			VBox root = FXMLLoader.load(getClass().getResource("menu.fxml"));
 			Scene scene = new Scene(root, width, height);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("menu.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {

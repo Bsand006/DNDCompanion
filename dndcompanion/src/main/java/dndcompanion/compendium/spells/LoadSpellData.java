@@ -31,19 +31,31 @@ public class LoadSpellData {
 
 		for (JsonNode spell : rootArray) {
 
-			if (i < 5) {
+			// Ensures that the same spell is not inserted twice.
+			
+			if (i != 0) {
+				if (spell.path("name").asText().equals(spells[i - 1].getName())) {
+					continue;
+				}
+			}
+
+			if (i < 4) {
 				if (spell.path("name").asText().toLowerCase().contains(spellQuery.toLowerCase())) {
-					i += 1;
+
+					JsonNode rangeNode = spell.path("range");
+					String range = rangeNode.path("type").asText() + rangeNode.path("amount").asText();
 
 					SpellData foundSpell = new SpellData(spell.path("source").asText(), spell.path("name").asText(),
-							spell.path("level").asInt(), spell.path("school").asText(), spell.path("entries").asText());
+							spell.path("level").asInt(), spell.path("school").asText(), spell.path("entries").asText(),
+							range);
 
 					spells[i] = foundSpell;
+					i += 1;
 
 				}
 			}
-		}
 
+		}
 		return spells;
 	}
 }

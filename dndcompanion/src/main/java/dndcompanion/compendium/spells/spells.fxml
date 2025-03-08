@@ -32,35 +32,32 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" prefHeight="400.0" prefWidth="640.0" spacing="10.0" style="-fx-background-color: #666475;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndcompanion.compendium.spells.SpellsController">
    <children>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <VBox prefHeight="98.0" prefWidth="302.0">
-               <children>
-                  <HBox prefHeight="65.0" prefWidth="302.0" />
-                  <TextField fx:id="searchbar" alignment="CENTER" onAction="#onSearch" prefHeight="26.0" prefWidth="191.0" />
-               </children>
-            </VBox>
+            <TextField fx:id="searchbar" alignment="BOTTOM_CENTER" onAction="#onSearch" prefHeight="26.0" prefWidth="191.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="184.0" prefWidth="640.0">
+      <HBox alignment="CENTER" prefHeight="225.0" prefWidth="640.0">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" />
-            <TreeTableView fx:id="table" prefHeight="183.0" prefWidth="433.0">
+            <TableView fx:id="table" onMouseClicked="#onMouseClicked" onSort="#onSearch" prefHeight="210.0" prefWidth="551.0">
               <columns>
-                <TreeTableColumn prefWidth="75.0" text="Name" />
-                <TreeTableColumn prefWidth="75.0" text="Level" />
-                  <TreeTableColumn prefWidth="75.0" text="Range" />
-                  <TreeTableColumn prefWidth="75.0" text="Duration" />
+                <TableColumn fx:id="nameCol" prefWidth="100.0" resizable="false" text="Name" />
+                <TableColumn fx:id="levelCol" prefWidth="75.0" text="Level" />
+                  <TableColumn fx:id="sourceCol" prefWidth="75.0" text="Source" />
+                  <TableColumn fx:id="schoolCol" prefWidth="75.0" text="school" />
+                  <TableColumn fx:id="rangeCol" prefWidth="75.0" text="Range" />
+                  <TableColumn fx:id="durationCol" prefWidth="75.0" text="Duration" />
+                  <TableColumn fx:id="descCol" prefWidth="75.0" text="Desc" />
               </columns>
-            </TreeTableView>
+            </TableView>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" />

@@ -13,9 +13,9 @@ public class Spells {
 
 	public void run(Scene scene) {
 		this.scene = scene;
-		
+
 		FXMLLoader loader = new FXMLLoader();
-	
+
 		loader.setLocation(getClass().getResource("spells.fxml"));
 
 		try {
